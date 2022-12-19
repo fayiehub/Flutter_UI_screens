@@ -80,6 +80,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
               ],
             ),
+          ),
+          Column(
+            children: [
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(38.0),
+                  child: Text("How It Works",
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w700)),
+                ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Text(
+                      "One Point is equivalent to Ksh 125 1 Point earned = Ksh 1",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+                ),
+              ),
+            ],
           )
         ],
       ),
