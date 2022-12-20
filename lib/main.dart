@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(
         title: Text(widget.title),
         actions: <Widget>[
@@ -46,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: Icon(Icons.menu),
       body: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(26),
+          color: Colors.white,
         ),
         child: Column(
           children: [
@@ -58,11 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Text("Points",
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
+                            fontSize: 14, fontWeight: FontWeight.bold)),
                     Text(
                       "1248",
                       style:
-                          TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
+                          TextStyle(fontSize: 21, fontWeight: FontWeight.w900),
                     )
                   ]),
             ),
@@ -179,14 +181,48 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text('Share your link',
                           style: TextStyle(
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w900,
                               color: Colors.black)),
                     ),
                   )
                 ],
               ),
-            )
+            ),
           ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                  width: 80,
+                  height: 30,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      // code to execute when the button is pressed
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    backgroundColor: Color.fromARGB(255, 255, 189, 7),
+                    child: Text('Home',
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.black)),
+                  )),
+              IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.comment_rounded)),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.shopping_cart_checkout_rounded)),
+              IconButton(
+                  onPressed: () {}, icon: Icon(Icons.person_add_alt_1_rounded))
+            ],
+          ),
         ),
       ),
     );
