@@ -214,7 +214,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontWeight: FontWeight.w900,
                             color: Colors.black)),
                   )),
-              IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
               IconButton(onPressed: () {}, icon: Icon(Icons.comment_rounded)),
               IconButton(
                   onPressed: () {},
